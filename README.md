@@ -9,6 +9,7 @@ Ferramentas:
 - [Font Awesome ícones] https://fontawesome.com
 - Links para CDN : [solid.css] https://use.fontawesome.com/releases/v5.15.4/css/solid.css E [fontawesome.css] https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css
 - Arquivo [Reset CSS]   https://meyerweb.com/eric/tools/css/reset/reset.css
+- Node.js
 
 Atalhos
 - criação arquivo html = ! + enter
