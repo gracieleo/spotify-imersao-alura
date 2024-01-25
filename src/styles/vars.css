@@ -1,0 +1,14 @@
+:root {
+    /* FONT */
+    --font-dm-sans: "DM Sans", sans-serif;
+
+    /* COLORS */
+    --bg-icon: #131313;
+    --bg-arrow-color: rgba(0,0,0.7);
+    --bg-search-color: #242424;
+    --bg-navigation-color: #121212;
+    --color-search-input: #fff;
+    --color-subscribe: #a7a7a7;
+    --color-login: #000;
+    --color-b3: #b3b3b3;
+}
