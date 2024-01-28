@@ -78,6 +78,7 @@
     font-weight: 700;
     background-color: transparent;
     margin-right: 2rem; /* 32px para rem */
+    border: none;
 }
   
 .header__login .login {

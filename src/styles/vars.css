@@ -8,9 +8,9 @@
     --bg-search-color: #242424;
     --bg-navigation-color: #121212;
     
-    --color-search-input: #fff; /* --text-base-light*/
-    --color-subscribe: #a7a7a7; /*--text-sub*/
-    --color-login: #000;  /*--text-base-dark:*/
+    --text-base-light: #fff; /* --color-search-input*/
+    --text-sub: #a7a7a7; /*--color-subscribe*/
+    --text-base-dark: #000;  /*--color-login*/
     --color-b3: #b3b3b3;
 
     --column-count: 5;

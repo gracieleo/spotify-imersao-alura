@@ -63,6 +63,11 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     cursor: pointer;
 }
 
+.header__login {
+    display: flex;
+    align-items: center;
+}
+
 .header__search {
     display: flex;
     align-items: center;
@@ -84,32 +89,28 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     background: transparent;
     border: none;
     padding: 0px 100px 0 12px;
-    color: var(--color-search-input);
+    color: var(--text-base-light);
     /* manter os ... ao fim do texto, quando não se pode mostrar tudo*/
-    text-overflow: ellipsis;  
+    text-overflow: ellipsis;   
     overflow: hidden;
     /* para não quebrar a linha do input */
     white-space: nowrap;
-    outline: none;
-}
-
-.header__login {
-    display: flex;
-    align-items: center;
+    outline: none;  
 }
 
 .header__login .subscribe {
-    color: var(--color-subscribe);
+    color: var(--text-sub);
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
     margin-right: 32px;
+    border: none;
 }
 
 .header__login .login {
     width: 100px;
     height: 48px;
-    color: var(--color-login);
+    color: var(--text-base-dark);
     font-size: 16px;
     font-weight: 700;
     border-radius: 40px;
@@ -119,16 +120,20 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
 
 .header__search:hover {
     border: 1px solid #fff;
-  }
+}
   
 .header__login .subscribe:hover {
     transform: scale(1.04);
-    color: var( --color-search-input);
-  }
+    color: var( --text-base-light);
+}
   
 .header__login .login:hover {
     transform: scale(1.04);
-  }
+}
+
+.section-playlist__button {
+    cursor: pointer;
+}
 
     /* FIM HOVER */
 
@@ -141,24 +146,24 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     margin: 10px;
     border-radius: 10px;
     background-color: var(--bg-navigation-color)
-  }
+}
   
 .playlist {
     margin: 24px;
-  }
+}
   
 .playlist #greeting {
-    color: var(--color-search-input);
+    color: #51c939;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 48px;
 }
 
 .playlist .session {
-    color: var(--color-search-input);
+    color: var(--text-base-light);
     font-size: 24px;
     font-weight: 700;
-  }
+}
 
 /* SCROLL */
 
@@ -212,7 +217,7 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     /* absolute:
                             Comportamento em relação ao ancestral posicionado mais próximo ou ao elemento raiz (se nenhum ancestral estiver posicionado).
                             Remove do fluxo normal: O elemento é removido do fluxo normal do documento, o que significa que outros elementos agem como se o elemento não estivesse presente. */
-    color: var(--color-search-input);
+    color: var(--text-base-light);
     font-size: 24px;
     font-weight: 700;
 }
@@ -273,7 +278,7 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     height: auto;
     width: 107px;
     transform: rotate(25deg) translate(18%, -2%);
-  }
+}
 
 
 /* CARD ARTISTA */
@@ -291,8 +296,8 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
 .grid-container {
     grid-gap: var(--grid-gap);
     display: grid;
-    grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
-    min-width: var(--min-container-width);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-width: 767px;
 } 
 
 .artist-card {
@@ -330,7 +335,7 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
 .card-text {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: var(--text-base-light);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

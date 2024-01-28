@@ -1,38 +1,39 @@
 /* document = HTML */
-const searchInput = document.getElementById('search-input');
-const resultArtist = document.getElementById('result-artist');
-const resultPlaylist = document.getElementById('result-playlists');
+const searchInput = document.getElementById("search-input");
+const resultArtist = document.getElementById("result-artist");
+const resultPlaylist = document.getElementById("result-playlists");
 
 /* consumir a API */
 function requestApi(searchTerm) {
-    fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)   /* endereço da API que vai consumir*/
-    .then((response) => response.json())
-    .then((results) => displayResults(results));
+    const url = `http://localhost:3000/artists?name_like=${searchTerm}`    
+    fetch(url)
+        .then((response) => response.json())
+        .then((result) => displayResults(result))
 }
 
-function displayResults(results) {
-    hidePlaylists();
+function displayResults(result) {
+    resultPlaylist.classList.add("hidden");
     const artistImage = document.getElementById("artist-img");
     const artistName = document.getElementById("artist-name");
   
-    results.forEach((element) => {
-      artistImage.src = element.urlImg;
-      artistName.innerText = element.name;
+    result.forEach((element) => {
+        artistName.innerText = element.name;
+        artistImage.src = element.urlImg;
     });
+    
     resultArtist.classList.remove("hidden");
-}
-
-function hidePlaylists() {
-    playlistContainer.classList.add("hidden");
 }
 /* fim consumo API */
 
+
 /* manipular eventos */
-document.addEventListener('input', function() {
+searchInput.addEventListener("input", function() {
     const searchTerm = searchInput.value.toLowerCase();
-    if (searchTerm === '') {
-        resultPlaylist.classList.add('hidden');
-        resultArtist.classList.remove('hidden');
+    if (searchTerm === "") {
+        /* Quando o campo de buscar ficar vazio, queremos mostrar as playlists de volta (remover o hidden de resultPlaylist) e esconder o resultado de artistas (adicionar o hidden em resultArtist).*/
+        resultPlaylist.classList.remove('hidden'); 
+        resultArtist.classList.add('hidden');
         return;
     }
+    requestApi(searchTerm);
 });
