@@ -24,7 +24,12 @@ O que é o arquivo Reset CSS ?
 - Uma folha de estilo de redefinição é uma coleção de regras CSS usadas para limpar a formatação padrão do navegador de elementos HTML, removendo possíveis inconsistências entre diferentes navegadores.
 Existem modelos prontos na internet ou pode pedir para uma IA criar. 
 
+html css js
+![image](https://github.com/gracieleo/spotify-imersao-alura/assets/53338148/71402718-23c4-4190-b0a6-96025ccc04fb)
 
+
+busca artista
+![image](https://github.com/gracieleo/spotify-imersao-alura/assets/53338148/767168eb-e61b-4905-8aea-29d57e789e73)
 
 React
 ![image](https://github.com/gracieleo/spotify-imersao-alura/assets/53338148/ff5bff7f-440b-4cd8-bff4-6cf37e3691d0)
